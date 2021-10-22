@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% from "bootstrap/form.html" import render_form %}
+
+{% block main %}
+    <div class="container">
+        <div class="content">
+            <h3>Recherche articles dans la base de données</h3>
+            
+            <form method="get">
+                {{ render_form(form) }}
+            </form>
+            
+            <div id="results">
+            </div>
+        </div>
+    </div>
+{% endblock main %}

@@ -1,0 +1,30 @@
+body{
+    background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    height: 100vh;
+
+}
+
+h3{
+    color: white;
+    margin-bottom: 30px;
+}
+
+label{
+    display: none;
+}
+
+#search {
+    padding: 20px 20px;
+    width: 100%;
+    border: 1px solid white;
+    background: rgba(0, 0, 0, .6);
+    color: white;
+}
