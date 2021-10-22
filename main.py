@@ -5,11 +5,21 @@ from flask_wtf import FlaskForm
 from wtforms import StringField
 from flask_bootstrap import Bootstrap
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    template_folder="assets/templates/",
+    static_folder="assets/static/"
+)
+app.config["SECRET_KEY"] = "pôiujhgjklm"
+
+
+class SearchForm(FlaskForm):
+    search = StringField(render_kw={"placeholder": "rechercher l'article ici..."})
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    form = SearchForm()
+    return render_template("index.html", form=form)
 
 
 if __name__ == "__main__":
